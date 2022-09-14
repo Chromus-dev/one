@@ -1,0 +1,23 @@
+{
+  "name": "special-waddle",
+  "version": "1.0.0",
+  "description": "AP CSP Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chromus-dev/special-waddle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chromus-dev/special-waddle/issues"
+  },
+  "homepage": "https://github.com/Chromus-dev/special-waddle#readme",
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
+}
