@@ -1,6 +1,6 @@
-console.log('hi');
-
-const socket = io('ws://localhost:3000');
+console.log('hello world');
+console.log(document.location.origin);
+const socket = io(`ws://${document.location.origin.replace('http://', '')}`);
 socket.on('message', (text) => {
 	const el = document.createElement('li');
 	el.innerHTML = text;
