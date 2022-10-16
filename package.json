@@ -1,23 +1,36 @@
 {
-  "name": "special-waddle",
-  "version": "1.0.0",
-  "description": "AP CSP Project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc src/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Chromus-dev/special-waddle.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Chromus-dev/special-waddle/issues"
-  },
-  "homepage": "https://github.com/Chromus-dev/special-waddle#readme",
-  "devDependencies": {
-    "typescript": "^4.8.3"
-  }
+	"name": "one",
+	"version": "1.0.0",
+	"description": "uno remake",
+	"main": "index.js",
+	"scripts": {
+		"dev": " nodemon --watch src -e ts,js,json,css,html src/index.ts",
+		"build": "tsc",
+		"prebuild": "npm run clean",
+		"start": "node build/index",
+		"prestart": "npm run build",
+		"clean": "rimraf build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Chromus-dev/one.git"
+	},
+	"author": "Chase",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Chromus-dev/one/issues"
+	},
+	"homepage": "https://github.com/Chromus-dev/one#readme",
+	"devDependencies": {
+		"@types/express": "^4.17.14",
+		"nodemon": "^2.0.20",
+		"rimraf": "^3.0.2",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.8.3"
+	},
+	"dependencies": {
+		"express": "^4.18.2",
+		"moment": "^2.29.4",
+		"socket.io": "^4.5.3"
+	}
 }

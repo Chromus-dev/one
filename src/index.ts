@@ -1,15 +1,25 @@
-let x: number = 5
+import { Server as SocketioServer } from 'socket.io';
+import express from 'express';
+import path from 'path';
+import http from 'http';
 
-let y: number = 5
+const PORT = 3000 || process.env.PORT;
 
-let z: number = 5
+const app = express();
+const server = http.createServer(app);
+const io = new SocketioServer(server, { cors: { origin: '*' } });
 
-console.log(x + y + z)
+app.use(express.static(path.join(__dirname, 'public')));
 
-let joke = {
-    setup: 'guess what',
-    punchLine: 'chicken butt'
-}
+io.on('connection', (socket) => {
+	console.log('a user connected');
 
-console.log(joke.setup)
-console.log(joke.punchLine)
+	socket.on('message', (message) => {
+		console.log(socket.id, message);
+		io.emit('message', `${socket.id} said ${message}`);
+	});
+});
+
+server.listen(PORT, () =>
+	console.log(`App is live on port ${PORT} | http://localhost:${PORT}`)
+);
