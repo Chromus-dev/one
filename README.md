@@ -17,6 +17,8 @@ Followed for basic socket.io tutorial: <https://www.youtube.com/watch?v=1BfCnjr_
 -   Draw system
 -   Page layout
     -   maybe like gamepigeon?
+-   Room Codes
+-   User system
 
 ### In-Progress
 
