@@ -1,6 +1,6 @@
 console.log('hello world');
 console.log(document.location.origin);
-const socket = io(`ws://${document.location.origin.replace(/https?:\/\//, '')}`);
+const socket = io(`ws://${document.location.origin.replace(/https?:\/\//, '')}`, { autoConnect: false });
 socket.on('message', (text) => {
 	const el = document.createElement('li');
 	el.innerHTML = text;

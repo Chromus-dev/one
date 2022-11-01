@@ -6,7 +6,10 @@ Re-make of uno
 
 <https://www.cometchat.com/tutorials/how-to-build-a-chat-app-with-websockets-and-node-js>
 
-Followed for basic socket.io tutorial: <https://www.youtube.com/watch?v=1BfCnjr_Vjg&ab_channel=Fireship>
+Followed for basic socket.io tutorial: 
+<https://www.youtube.com/watch?v=1BfCnjr_Vjg&ab_channel=Fireship>
+
+[Source code for video](https://github.com/fireship-io/socketio-minimal-demo)
 
 ---
 

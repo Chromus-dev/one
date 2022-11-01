@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 io.on('connection', (socket) => {
 	console.log('a user connected');
-
+	socket.
 	socket.on('message', (message) => {
 		console.log(socket.id, message);
 		io.emit('message', `${socket.id} said ${message}`);
